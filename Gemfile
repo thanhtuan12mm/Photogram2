@@ -3,14 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.4'
 gem 'slim-rails'
-gem "paperclip", "~> 4.2"
 gem 'simple_form'
 gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'kaminari'
 gem 'jquery-turbolinks'
-gem 'acts_as_votable'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'

@@ -1,0 +1,14 @@
+.posts-wrraper.row
+  .post.col-md-6.offset-md-3
+    .post-head 
+      .name 
+        h5 thanhtuan12mm 
+    .image
+      = image_tag @post.image, class: 'img-fluid'
+    p.caption 
+      = @post.caption
+    .text-center.edit-links
+      => link_to 'Cancel', posts_path
+      | | 
+      = link_to 'Edit Post', edit_post_path(@post)
+    
