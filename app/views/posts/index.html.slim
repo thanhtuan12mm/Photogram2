@@ -1,10 +1,5 @@
-.posts-wrraper.row
-  - @posts.each do |post|
-    .post.col-md-6.offset-md-3
-      .post-head 
-        .name 
-          h5 thanhtuan12mm 
-      .image
-        = link_to (image_tag post.image, class: 'img-fluid'), post_path(post)
-      p.caption 
-          = post.caption
+#posts
+  = render 'posts'
+
+#paginator.text-center 
+  = link_to_next_page @posts, 'LOAD MORE', remote: true, id: 'load_more'

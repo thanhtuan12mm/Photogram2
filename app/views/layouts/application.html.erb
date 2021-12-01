@@ -4,42 +4,15 @@
     <title>Photogram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/287c348a81.js" crossorigin="anonymous"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light">
-      <div class="navbar-container">
-        <div class="navbar-header">
-          <div class="navbar-brand">
-            <%= link_to 'PHOTOGRAM', root_path %>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav navbar-right ml-auto">
-
-          <li class="nav-item mx-2">
-            <%= link_to 'New Post', new_post_path %>
-          </li>
-
-          <li class="nav-item mx-2">
-            <%= link_to 'Login' %>
-          </li>
-          
-          <li class="nav-item mx-2">
-            <%= link_to 'Register' %>
-          </li>
-
-        </ul>
-      </div>
-    </nav>
+    
+    <%= render 'layouts/navbar' %>
     
     <div class="row">
       <div class="col-md-6 offset-md-3">
@@ -51,7 +24,12 @@
         <% end %>
       </div>
     </div>
-    
+
+    <!--
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    -->
+
     <%= yield %>
   
   </body>
