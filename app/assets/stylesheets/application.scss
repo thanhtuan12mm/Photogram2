@@ -249,3 +249,13 @@ html, body {
 .profile-bio {
   margin-top: 20px;
 }
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
+}
