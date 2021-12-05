@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   validates :caption, length: { maximum: 300 }
   validates :user_id, presence: true
   has_many :comments, dependent: :destroy
+  has_many :notifications, dependent: :destroy
+  scope :of_followed_users, -> (following_users) { where user_id: following_users }
   
   private
   def image_presence

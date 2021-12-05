@@ -1,0 +1,10 @@
+<li class="nav-item dropdown">
+  <span class='noti-count' id='dropdownMenu1'>
+    <%= current_user.notifications.count %>
+  </span>
+  <a class="nav-link dropdown-toggle p-0 mr-1" id='dropdownMenu1' data-toggle="dropdown" href="#" role="button" aria-expanded="false">Notifications</a>
+  <div class="dropdown-menu text-center" id='dropdownMenu1'>
+    <%= render current_user.notifications.order('created_at DESC').last(5) %>
+    <%= link_to 'View All', notifications_path %>
+  </div>
+</li>
